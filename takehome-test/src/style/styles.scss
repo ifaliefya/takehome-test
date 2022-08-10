@@ -1,0 +1,252 @@
+// @import 'bootstrap/dist/bootstrap.min.css';
+@import 'antd/dist/antd.css'; 
+
+$grey : #6b7280;
+$primary: #6841c6;
+$white: #fff;
+
+.bg-primary {
+  background: $primary!important;
+}
+.text {
+  &-grey {
+    color: $grey;
+  }
+  &-primary {
+    color: $primary;
+  }
+  &-white {
+    color: $grey;
+  }
+}
+.ant-btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  span {
+    color: $white;
+  }
+  &:hover {
+    background-color: lighten($primary, 5);
+    border-color: lighten($primary, 5);
+  }
+}
+
+.text {
+  &-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  } 
+  &-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  } 
+  &-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  } 
+  &-lg { 
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  &-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  } 
+  &-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  } 
+  &-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  } 
+  &-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  &-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+.font {
+  &-thin {font-weight: 100;}
+  &-extralight {font-weight: 200;}
+  &-light {font-weight: 300;}
+  &-normal {font-weight: 400;}
+  &-medium {font-weight: 500;}
+  &-semibold {font-weight: 600;}
+  &-bold {font-weight: 700;}
+  &-extrabold {font-weight: 800;}
+}
+.list-none {
+  list-style: none;
+}
+
+//navbar 
+.navbar {
+  a {
+    color: $white;
+    &:hover, .active {
+      font-weight: 700;
+      color: $white;
+    }
+  }
+  .navbar-brand {
+    img {
+      width: 60px;
+      height: 50px;
+      object-fit: cover;
+      padding-right: 10px;
+    }
+  }
+
+  .navbar-nav {
+    margin-left: auto;
+  }
+}
+
+//home 
+.home-hero {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background-color: #b0acac;
+  .home-hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .home-hero-logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+
+  .container-carousel {
+    position: absolute;
+    top: 170px;
+    left: 24%;
+    right: auto;
+    z-index: 2;
+    &.hero-carousel-2 {
+      right: 24%;
+      left: auto;
+    }
+    img {
+      width: 170px;
+      height: 270px;
+      object-fit: cover;
+    }
+
+    .carousel-wrapper {
+      width: 170px;
+      height: 270px;
+    }
+  }
+
+  .container-banner {
+    position: absolute;
+    bottom: 22%;
+    left: 11.5%;
+    right: auto;
+    .ant-image {
+      display: block;
+      height: 0;
+      padding-bottom: 65%;
+      overflow: hidden;
+      position: relative;
+      width: 340px;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &.banner-2 {
+      right: 17.5%;
+      left: auto;
+      bottom: 28%;
+      .ant-image {
+        width: 260px;
+      }
+    }
+  } 
+}
+
+//Job Details page
+.cta-buttons {
+  margin-bottom: 40px;
+  .cta-button {
+    padding: 5px 10px;
+    border: 0;
+    font-size: 20px;
+    svg {
+      display: block;
+    }
+  }
+}
+a.btn-apply {
+  padding: 10px!important;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: $primary;
+  border:0;
+  svg {
+    display: block;
+    fill: $white;
+  }
+  &:hover {
+    background: darken($primary, 15);
+  }
+}
+
+.jobs-nav-container {
+  background-color: lighten($primary, 35);
+  .ant-menu {
+    background: transparent;
+    .ant-menu-item {
+      &:hover, &.ant-menu-item-selected {
+        &:after {
+          border-color: $primary;
+        }
+      }
+      a {
+        background: transparent;
+        border: 0;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+#jobs-apply {
+  background: lighten($primary, 35);
+  .form-apply {
+    .upload-field {
+      display: flex;
+    }
+  }
+}
